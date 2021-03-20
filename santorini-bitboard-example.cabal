@@ -1,0 +1,52 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.33.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: d62072dd3e9ead806237b4a974d0dc0f091a823812302adec949000ca51fbfa6
+
+name:           santorini-bitboard-example
+version:        0.1.0
+description:    Please see the README on GitHub at <https://github.com/mogproject/santorini-bitboard-example#readme>
+homepage:       https://github.com/mogproject/santorini-bitboard-example#readme
+bug-reports:    https://github.com/mogproject/santorini-bitboard-example/issues
+author:         mogproject
+maintainer:     mogproject
+copyright:      2021 mogproject
+license:        Apache-2.0
+license-file:   LICENSE
+build-type:     Simple
+
+source-repository head
+  type: git
+  location: https://github.com/mogproject/santorini-bitboard-example
+
+library
+  exposed-modules:
+      Data.BitBoard
+  other-modules:
+      Paths_santorini_bitboard_example
+  hs-source-dirs:
+      src
+  build-depends:
+      QuickCheck
+    , base >=4.7 && <5
+    , containers
+    , criterion
+  default-language: Haskell2010
+
+executable bench
+  main-is: BenchMain.hs
+  other-modules:
+      Paths_santorini_bitboard_example
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      QuickCheck
+    , base >=4.7 && <5
+    , containers
+    , criterion
+    , santorini-bitboard-example
+  default-language: Haskell2010

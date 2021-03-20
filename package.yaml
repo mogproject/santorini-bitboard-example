@@ -1,0 +1,28 @@
+name: santorini-bitboard-example
+version: 0.1.0
+github: "mogproject/santorini-bitboard-example"
+license: Apache-2.0
+author: "mogproject"
+copyright: "2021 mogproject"
+
+description: Please see the README on GitHub at <https://github.com/mogproject/santorini-bitboard-example#readme>
+
+dependencies:
+  - base >= 4.7 && < 5
+  - containers
+  - QuickCheck
+  - criterion
+
+library:
+  source-dirs: src
+
+executables:
+  bench:
+    main: BenchMain.hs
+    source-dirs: app
+    ghc-options:
+      - -threaded
+      - -rtsopts
+      - -with-rtsopts=-N
+    dependencies:
+      - santorini-bitboard-example
