@@ -8,7 +8,7 @@ import qualified Data.IntMap.Strict as IntMap
 import Data.List (foldl', groupBy, iterate', sort)
 import Data.Sequence (Seq)
 import qualified Data.Sequence as Seq
-import Test.QuickCheck (Arbitrary (arbitrary), Gen, chooseInt, elements, generate, shuffle, vectorOf)
+import Test.QuickCheck (chooseInt, elements, generate, shuffle, vectorOf)
 
 --------------------------------------------------------------------------------
 -- Types
